@@ -1,0 +1,60 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	
+	<head>
+		<title>List of Users</title>
+		 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		 
+		<link rel="stylesheet" 
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+			integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
+			crossorigin="anonymous" />
+	</head>
+	
+	<body>
+		
+		<div class="container">
+		
+			<h3>List of Users</h3>
+			
+			
+			<hr/>
+			
+			<a href="http://localhost:8080" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"  role:button >
+ 			 <button 
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body"  >>Return to Main Page </button>
+			  </a>
+			
+			<hr/>
+		
+			
+			<table class="table table-bordered table-striped">
+			
+				<thead>
+									
+					<tr>
+						<th>FirstName</th>
+						<th>LastName</th>
+						<th>Weight</th>
+						<th>Height</th>
+						<th>Your BMI</th>
+						<th>Your BMI Range</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr >
+						<td th:text="${Users.firstName}" />
+						<td th:text="${Users.lastName}" />
+						<td th:text="${Users.weight}" />	
+						<td th:text="${Users.height}" />	
+						<td th:text="${Users.Index_Result}" />	
+						<td th:text="${Users.Index_Range}" /> 		
+					</tr>
+				</tbody>
+				
+			</table>
+		</div>
+		
+		
+	</body>
+	
+</html>
